@@ -1,0 +1,28 @@
+#vision{
+    background-color: #FFFFFF;
+    color: #080808;
+}
+
+// .container{
+// width: 20px;
+// height: 50px;
+
+// }
+/* Establece un contenedor que contiene ambas columnas */
+.contenedor {
+    display: flex; /* Utiliza flexbox para distribuir las columnas */
+}
+
+/* Estilos para la columna izquierda */
+.columna-izquierda {
+    flex: 1; /* La columna izquierda toma el 50% del ancho del contenedor */
+    background-color: #FFFFFF;
+    padding: 20px;
+}
+
+/* Estilos para la columna derecha */
+.columna-derecha {
+    flex: 1; /* La columna derecha también toma el 50% del ancho del contenedor */
+    background-color: #FFFFFF;
+    padding: 20px;
+}

@@ -1,0 +1,35 @@
+// .contenedor {
+//   display: flex;
+//   justify-content:space-around;
+//   align-items: center;  
+//   padding-top: -5px;
+//   padding-left: 200px;
+//   z-index: 10;
+//   flex-direction: row;
+//   width: 100vw;
+//   flex-wrap: nowrap;
+//     list-style-type: none;
+//   margin-top: 0;
+//   background: rgb(123, 41, 41);
+//   margin-right: 40px;  
+// }
+.example-spacer {
+  flex: 1 1 auto;
+}
+mat-toolbar.sticky{
+  background-color: rgb(255, 141, 199);
+  color: rgb(255, 255, 255);
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  box-shadow: #a7a7a7 0px 0px 5px;
+  
+}
+mat-toolbar{
+  background-color:  rgb(255, 141, 199);
+  color: rgb(255, 255, 255);
+}
+
+#imagen {
+  width: 80px; /* Ancho en píxeles */
+}
