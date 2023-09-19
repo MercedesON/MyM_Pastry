@@ -1,56 +1,18 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 <mat-toolbar color="primary" class="mat-elevation-z8">
-    <!-- <button (click)="drawer.toggle()" mat-icon-button>
-        <mat-icon>menu</mat-icon>
-    </button> -->
-    <!-- <span>Venta de Tortas</span> -->
     <img  style="width: 80px;"  src="assets/images/logo4.png" > 
     <span class="example-spacer"></span>
     <button routerLink="" mat-button>INICIO</button>
-    <button routerLink="" mat-button>NOSOTRAS</button>
-    <button routerLink="" mat-button>SERVICIOS</button>
+    <a  mat-button class="nav-link" href="#nosotras">NOSOTRAS</a>
+    <button mat-button [matMenuTriggerFor]="servicios" class="link">SERVICIOS</button>
+    <mat-menu #servicios="matMenu" class="dropdowncontent" >
+        <a mat-menu-item class="nav-link" href="#tortas">Tortas</a>
+        <a mat-menu-item class="nav-link" href="#bocaditos">Bocaditos</a>
+        <a mat-menu-item class="nav-link" href="#complementos">Complementos</a>  
+    </mat-menu>
     <button routerLink="" mat-button style="padding-right: 20px;">CONTACTO</button>
     <i class="fa fa-shopping-cart" aria-hidden="true" style="padding-right: 200px;"></i>
-    <!-- <i class="fas fa-user"></i> -->
-    <button routerLink="" mat-button class="fas fa-user" style="padding-right: 30px;">INICIAR SESION</button>
-    <!-- <button routerLink="" mat-button>INICIO</button>
-    <button [matMenuTriggerFor]="lvl1master" mat-button>SOBRE NOSOTRAS</button>
-    
-    <mat-menu #lvl1master="matMenu" >
-        <button [matMenuTriggerFor]="company" mat-menu-item>Company</button>
-        <button [matMenuTriggerFor]="customer" mat-menu-item>Customer</button>
-        <button [matMenuTriggerFor]="product" mat-menu-item>Product</button>
-    </mat-menu>
-
-    <mat-menu #company="matMenu">
-        <button mat-menu-item>Term</button>
-        <button mat-menu-item>Tax</button>
-        <button mat-menu-item>Currency</button>
-    </mat-menu>
-    <mat-menu #customer="matMenu">
-        <button mat-menu-item>Type</button>
-        <button mat-menu-item>Tax</button>
-    </mat-menu>
-    <mat-menu #product="matMenu">
-        <button mat-menu-item>Category</button>
-        <button [matMenuTriggerFor]="variant" mat-menu-item>Variant</button>
-        <button mat-menu-item>UOM</button>
-    </mat-menu>
-
-    <mat-menu #variant="matMenu">
-        <button mat-menu-item>Color</button>
-        <button mat-menu-item>Size</button>
-    </mat-menu>
-
-    <button routerLink="input" mat-button>Bocaditos</button>
-    <button routerLink="autocomplete" mat-button>Complementos</button>
-    <button routerLink="autocomplete" mat-button>Contacto</button> -->
-    
-    
-    <!-- <a href="https://www.youtube.com/channel/UCsbmVmB_or8sVLLEq4XhE_A/join" mat-raised-button color="accent">login</a> -->
-    <!-- <button (click)="badgevisibility()"  mat-icon-button>
-        <mat-icon matBadgeColor="accent" matBadge="15" [matBadgeHidden]="badgevisible" matBadgeSize="small">notifications</mat-icon>
-    </button> -->
+    <button routerLink="" mat-button class="fas fa-user" style="padding-right: 30px;">INICIAR SESION</button>   
 </mat-toolbar>
 
 <!-- <mat-drawer-container autosize>
