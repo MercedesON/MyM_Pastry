@@ -2,18 +2,30 @@
 <mat-toolbar color="primary" class="mat-elevation-z8">
     <img  style="width: 80px;"  src="assets/images/logo4.png" > 
     <span class="example-spacer"></span>
-    <button routerLink="" mat-button>INICIO</button>
-    <a  mat-button class="nav-link" href="#nosotras">NOSOTRAS</a>
-    <button mat-button [matMenuTriggerFor]="servicios" class="link">SERVICIOS</button>
+    <button routerLink="/home" mat-button >INICIO</button>
+    <!-- <a  mat-button class="nav-link" href="#nosotras">NOSOTRAS</a> -->
+    <a  mat-button class="link" href="#nosotras">NOSOTRAS</a> 
+    <!-- <button mat-button (click)="is0n = true;isContacto=false;isNosotras=true" href="#nosotras" >NOSOTRAS</button> -->
+    <button mat-button [matMenuTriggerFor]="servicios" class="link" (click)="is0n = true">SERVICIOS</button>
     <mat-menu #servicios="matMenu" class="dropdowncontent" >
         <a mat-menu-item class="nav-link" href="#tortas">Tortas</a>
         <a mat-menu-item class="nav-link" href="#bocaditos">Bocaditos</a>
-        <a mat-menu-item class="nav-link" href="#complementos">Complementos</a>  
+        <a mat-menu-item class="nav-link" href="#complementos">Complementos</a>          
     </mat-menu>
-    <button routerLink="" mat-button style="padding-right: 20px;">CONTACTO</button>
+    <!-- <button routerLink="/contacto" mat-button style="padding-right: 20px;" >CONTACTO</button> -->
+    <button  (click)="is0n = false;isContacto=true" mat-button style="padding-right: 20px;" >CONTACTO</button>
+    <!-- <a  mat-button class="nav-link" style="padding-right: 20px;" href="#contacto">CONTACTO</a> -->
     <i class="fa fa-shopping-cart" aria-hidden="true" style="padding-right: 200px;"></i>
-    <button routerLink="" mat-button class="fas fa-user" style="padding-right: 30px;">INICIAR SESION</button>   
+    <button routerLink="/app-login-container" mat-button class="fas fa-user" style="padding-right: 30px;">INICIAR SESION</button>   
 </mat-toolbar>
+<app-carousel *ngIf="is0n"></app-carousel>
+<app-vision *ngIf="is0n" style="margin-top: -70px;"></app-vision>
+<app-tortas *ngIf="is0n" style="margin-top: -70px;"></app-tortas> 
+<app-bocaditos *ngIf="is0n" style="margin-top: -70px;"></app-bocaditos>
+<app-complementarios *ngIf="is0n" style="margin-top: -80px;margin-bottom:-70px;"></app-complementarios>
+<app-contacto *ngIf="isContacto" style="margin-top: -80px;margin-bottom:-70px;"></app-contacto>
+
+
 
 <!-- <mat-drawer-container autosize>
     <mat-drawer #drawer opened="true" mode="side" position="start">

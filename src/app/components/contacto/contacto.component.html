@@ -1,0 +1,78 @@
+<div class="container">
+  <div class="colum">
+        <form onSubmit="handleSubmit" class="section">
+        <h2 class="sectionTitle">Envíanos un mensaje</h2>
+        <div class="contactForm">
+        <div class="contactItem">
+          <input type="text" id="name" [(ngModel)]="userData.name" (input)="handlerInput($event)" name="name" class="contactInput" placeholder="Ingresa tu nombre" required />
+        </div>
+        <!-- {error.name && <p>{error.name}</p>} -->
+        <div *ngIf="error.name" class="error-message">
+          {{ error.name }}
+        </div>
+
+        <div class="contactItem">
+          <input type="email" id="email" [(ngModel)]="userData.email" (input)="handlerInput($event)" name="email" class="contactInput" placeholder="Ingresa tu correo electrónico" required />
+        </div>
+        <!-- {error.email && <p>{error.email}</p>} -->
+        <div *ngIf="error.email" class="error-message">
+          {{ error.email }}
+        </div>
+
+        <div class="contactItem">
+          <input type="tel" id="phone" [(ngModel)]="userData.phone" (input)="handlerInput($event)"  name="phone" class="contactInput" placeholder="Ingresa tu número de teléfono" required />
+        </div>
+        <!-- {error.phone && <p>{error.phone}</p>} -->
+        <div *ngIf="error.phone" class="error-message">
+          {{ error.phone }}
+        </div>       
+            <div class="contactItem">
+              <textarea id="reclamo" [(ngModel)]="userData.description" (input)="handlerInput($event)" name="description" class="contactTextarea" placeholder="Escribe tu reclamo o sugerencia" required></textarea>
+            </div>
+            <div class="contactItem">
+              <!-- {error.description && <p>{error.description}</p>} -->
+              <!-- <div *ngIf="error.description">
+                <p>{{ error.description }}</p>
+              </div> -->
+              <button type="submit" class="enviar">Enviar</button>
+            </div>
+          <!-- </> -->
+      </div>
+    </form>
+  </div>
+
+  <div class="column">
+  <h1 class="title">Centro de Ayuda</h1>
+  <div class="section">
+    <h2 class="sectionTitle">Contáctanos</h2>
+    <p class="contactText">
+      Si tienes alguna otra pregunta o necesitas más ayuda,<br><br> no dudes en contactarnos.
+    </p>
+    <div class="contactItem">
+      <!-- <FontAwesomeIcon icon={faPhone} class="contactIcon" />       -->
+      <i class="fa fa-phone" aria-hidden="true" class="contactIcon" ></i>
+      <span class="contactLabel">Teléfono:</span> (+123) 456-7890
+    </div>
+    <div class="contactItem">
+      <!-- <FontAwesomeIcon icon={faEnvelope} class="contactIcon" /> -->
+      <i class="fa fa-envelope" aria-hidden="true" class="contactIcon" ></i>
+      <span class="contactLabel">Correo electrónico:</span> hoteltermaleterno@gmail.com
+    </div>
+    <div className="contactItem">
+      <!-- <FontAwesomeIcon icon={faMapMarkerAlt} class="contactIcon" /> -->
+      <i class="fa fa-map-marker" aria-hidden="true" class="contactIcon" ></i>
+      <span class="contactLabel">Dirección:</span> Calle Principal 123, Hotel Eterno
+    </div>
+    <div className="contactItem">
+      <!-- <FontAwesomeIcon icon={faComments}  class="contactIcon" /> -->
+      <i class="fa fa-comments-o" aria-hidden="true" class="contactIcon"></i>
+      <!-- <Link to="/chat" class="contactLabellink">
+      Chatbot
+      </Link> -->
+    </div>
+  </div>
+  </div>
+
+</div>
+
+

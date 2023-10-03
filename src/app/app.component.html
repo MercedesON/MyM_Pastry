@@ -1,10 +1,14 @@
 <div class="navbar-content">
   <app-navbar></app-navbar> 
-  <app-carousel></app-carousel>
-  <app-vision style="margin-top: -70px;"></app-vision>
-  <app-tortas style="margin-top: -70px;"></app-tortas> 
-  <app-bocaditos style="margin-top: -70px;"></app-bocaditos>
-  <app-complementarios style="margin-top: -80px;margin-bottom:-70px;"></app-complementarios>
+  <!-- <app-contacto></app-contacto> -->
+  <router-outlet></router-outlet><!-- Aquí se cargarán los componentes según la ruta -->
+  <app-footer></app-footer>
+  <!-- <ul class="nav navbar-nav">
+    <li>
+      <a (click)="goToContact()">Contacto</a>
+    </li>  
+  </ul> -->  
   <!-- <app-servicios></app-servicios>> -->
 </div>
-<app-footer></app-footer>
+
+

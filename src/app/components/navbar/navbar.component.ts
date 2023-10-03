@@ -1,15 +1,29 @@
 import { Component, OnInit } from '@angular/core';
-// import { Router } from '@angular/router';
+//import { RouterModule } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
+  //standalone: true,
+  //imports:[RouterModule],
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
   badgevisible = false;
+  is0n = true;
+  isContacto = false;
+  isNosotras=false;
+
   badgevisibility() {
     this.badgevisible = true;
+  }
+  constructor(private router: Router) {   
+  }
+  
+  goToContact() {
+    console.log("goToContact");    
+    this.router.navigate(['/', 'contacto']);
   }
 }
 

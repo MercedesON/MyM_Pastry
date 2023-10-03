@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 //import { BrowserModule } from '@angular/platform-browser/';
 
 //import { ToolbarComponent } from './components/toolbar/toolbar.component';
@@ -31,23 +32,26 @@ import { ServiciosComponent } from './components/servicios/servicios.component';
 import { VisionComponent } from './components/vision/vision.component';
 import { BocaditosComponent } from './components/bocaditos/bocaditos.component';
 import { ComplementosComponent } from './components/complementos/complementos.component';
-
-
+import { ContactoComponent } from './components/contacto/contacto.component';
+import { LoginContainerComponent } from './components/login-container/login-container.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { SignInComponent } from './components/sign-in/sign-in.component';
 
 
 @NgModule({
   declarations: [ AppComponent, 
     FooterComponent, 
     CarouselComponent, 
-    NavbarComponent, TortasComponent, ServiciosComponent, VisionComponent, BocaditosComponent, ComplementosComponent],
+    NavbarComponent,
+    TortasComponent, ServiciosComponent, VisionComponent, BocaditosComponent, ComplementosComponent, ContactoComponent, LoginContainerComponent, SignUpComponent, SignInComponent
+  ],
   imports: [AppRoutingModule,
    BrowserAnimationsModule,
     FontAwesomeModule, 
     FormsModule,
     ReactiveFormsModule,
     SwiperModule,
-    CarouselModule,
-   // BrowserModule, 
+    CarouselModule, 
    FlexLayoutModule,
    MatInputModule, 
     MatSelectModule, 
