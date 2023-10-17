@@ -1,0 +1,62 @@
+<div class="container"  style="height: 570px;" >
+    <div class="colum" style="margin-left: -60px;margin-top: 15px;padding-bottom: 50px;margin-bottom: 50px;">
+          <form onSubmit="handleSubmit" class="section">
+          <h2 class="sectionTitle">Envíanos un mensaje</h2>
+          <div class="contactForm">
+          <div class="contactItem">
+            <input type="text" id="name"  name="name" class="contactInput" placeholder="Ingresa tu nombre" required />
+          </div>
+          <div *ngIf="error.name" class="error-message">
+            {{ error.name }}
+          </div>
+  
+          <div class="contactItem">
+            <input type="email" id="email"  name="email" class="contactInput" placeholder="Ingresa tu correo electrónico" required />
+          </div>
+          <div *ngIf="error.email" class="error-message">
+            {{ error.email }}
+          </div>
+  
+          <div class="contactItem">
+            <input type="tel" id="phone" name="phone" class="contactInput" placeholder="Ingresa tu número de teléfono" required />
+          </div>
+          <div *ngIf="error.phone" class="error-message">
+            {{ error.phone }}
+          </div>       
+              <div class="contactItem">
+                <textarea id="reclamo" name="description" class="contactTextarea" placeholder="Escribe tu reclamo o sugerencia" required></textarea>
+              </div>
+              <div class="contactItem">
+                <button type="submit" class="enviar">Enviar</button>
+              </div>
+        </div>
+      </form>
+    </div>
+  
+    <div class="column">
+    <h1 class="title">Centro de Ayuda</h1>
+    <div class="section">
+      <h2 class="sectionTitle">Contáctanos</h2>
+      <p class="contactText">
+        Si tienes alguna otra pregunta o necesitas más ayuda,<br><br> no dudes en contactarnos.
+      </p>
+      <div class="contactItem">
+        <i class="fa fa-phone" aria-hidden="true" class="contactIcon" ></i>
+        <span class="contactLabel">Teléfono:</span> (+51) 236-3032
+      </div>
+      <div class="contactItem">
+        <i class="fa fa-envelope" aria-hidden="true" class="contactIcon" ></i>
+        <span class="contactLabel">Correo electrónico:</span> pastrymym@gmail.com
+      </div>
+      <div className="contactItem">
+        <i class="fa fa-map-marker" aria-hidden="true" class="contactIcon" ></i>
+        <span class="contactLabel">Dirección:</span> Calle Principal 898, Pastry MyM
+      </div>
+      <div className="contactItem">
+        <i class="fa fa-comments-o" aria-hidden="true" class="contactIcon"></i>   
+      </div>
+    </div>
+    </div>
+  
+  </div>
+  <app-footer></app-footer> 

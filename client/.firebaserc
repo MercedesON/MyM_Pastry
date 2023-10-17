@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "fire-pastry": {
+      "hosting": {
+        "MyM-Pastry": [
+          "fire-pastry"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "fire-pastry"
+  }
+}

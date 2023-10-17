@@ -1,0 +1,74 @@
+.container-fluid{
+  padding-top: 0.5%;
+  padding-bottom: 25%;
+}
+  
+  /* Estilos para el contenedor */
+.container {
+  display: flex;
+  //justify-content: space-between; /* Espaciado entre las columnas */
+  max-width: 100vw;
+  width: 100%;
+  flex-wrap: wrap;
+  z-index: 0;
+  margin: 0;
+  padding: 50px;
+  right: 0;
+  }
+  .encierro{
+    width: 400px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 10px rgba(24, 14, 14, 0.3);
+    background-color: #979494;
+    opacity: 80%;
+    border: 20px  #0c0909;    
+    align-items: center;
+    text-align: center;
+    margin-top: 150px;
+    margin-left: 500px;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+  }
+  .botoncerrar {
+    position: relative;
+    left: 500px;
+    bottom: 10px;    
+    background-color: #ccc;
+    color: black;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    cursor: pointer;
+    text-decoration: none;
+    top:130px;
+    padding-left: 6px;
+
+
+  }
+ .linkContainer{
+  text-decoration: none;
+ }
+  .button {
+    margin: 10px;
+    background-color: #FF8DC7;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 16px;
+  }
+  
+  .button:hover {
+    background-color:  #FF8DC7;
+  }
+  
+ 
