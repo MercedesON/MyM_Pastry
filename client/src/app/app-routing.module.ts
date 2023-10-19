@@ -11,14 +11,16 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 //import { AuthGuard } from './shared/guards/auth.guard';
 
 const routes: Routes = [
-  {path:'',redirectTo:'navbar',pathMatch:'full'},
-  {path:'',component:HomeComponent},
-  {path:'home',component:HomeComponent},
-  {path:'about',component:AboutComponent},
-  {path:'contact',component:ContactComponent},
-  {path:'login-container',component:LoginContainerComponent},
+  {path:'',redirectTo:'login',pathMatch:'full'},
   {path:'login',component: SignInComponent},
-  {path:'register',component:SignUpComponent},
+  {path:'register',component: SignUpComponent},
+  {path:'navbar',component: NavbarComponent}
+  // {path:'navbar',component: NavbarComponent, canActivate: [AuthGuard] },
+  // {path:'home',component:HomeComponent},
+  // {path:'about',component:AboutComponent},
+  // {path:'contact',component:ContactComponent},
+  // {path:'login-container',component:LoginContainerComponent},  
+  // {path:'register',component:SignUpComponent},
   //{ path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] }
 
   // { path: 'home', loadChildren: () => import('./modules').then(m => m.HomeModule)}

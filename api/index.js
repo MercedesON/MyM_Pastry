@@ -24,6 +24,69 @@ app.listen(port, () => {
   console.log(`Servidor en ejecución en el puerto ${port}`);
 });
 // Define las rutas y controladores para interactuar con la base de datos
+//get all user
+app.get('/users', (req, res)=>{
+	//console.log("get all cake");
+	let qrr=`SELECT * FROM users`;
+	db.query(qrr,(err,results)=>{
+		if(err){
+			console.log(err,'errs');
+		}
+		if(results.length>0){
+			res.send({
+				message:'All users Data',
+				data:results
+			});
+		};
+
+	});
+	
+});
+//get single data by ID
+app.get('/user/:id',(req,res)=>{
+	let qrId= req.params.id;
+	let qr=`SELECT * FROM users where iduser=${qrId}`;
+	db.query(qr,(err,results)=>{
+		if(err){
+			console.log(err);
+		}
+		if(results.length>0){
+			res.send({
+				message:"Get data by ID",
+				dat:results
+			})
+		}else{
+			res.send({
+				message:"Data not found dear!"
+			})
+
+		}
+	})	
+})
+// app.listen(3001,()=>{
+// 	console.log("Server is running on 3001 PORT, MerciCod")
+// })
+
+
+//get all cake
+app.get('/tortas', (req, res)=>{
+	//console.log("get all cake");
+	let qrr=`SELECT * FROM tortas`;
+	db.query(qrr,(err,results)=>{
+		if(err){
+			console.log(err,'errs');
+		}
+		if(results.length>0){
+			res.send({
+				message:'All tortas Data',
+				data:results
+			});
+		};
+
+	});
+	
+});
+
 app.get('/tortas_cake', function(req, res){
 	cakeTorta.getAllTortas(function(data){
 		res.send(data);
