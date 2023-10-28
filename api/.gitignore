@@ -1,26 +1,42 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# Compiled output
+/dist
+/tmp
+/out-tsc
+/bazel-out
+
 # Node
 /node_modules
 npm-debug.log
 yarn-error.log
 
-# Archivos de construcción
-/build
-/dist
+# IDEs and editors
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
 
-# Archivos de configuración local
-.env
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
 
-# Archivos de registro
-/log
+# Miscellaneous
+/.angular/cache
+.sass-cache/
+/connect.lock
+/coverage
+/libpeerconnection.log
+testem.log
+/typings
 
-# Otros archivos generados
+# System files
 .DS_Store
-
-# Archivos específicos de MongoDB
-/db
-
-# Archivos de respaldo
-/backup
-
-# Archivos de registro de error de producción
-/error.log
+Thumbs.db
