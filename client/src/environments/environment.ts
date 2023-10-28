@@ -3,6 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
+  production: false,
+    endpoint:'http://localhost:3001/',
   firebase: {
     projectId: 'fire-pastry',
     appId: '1:251415987065:web:ee1a440be8126bd78625a8',
@@ -11,7 +13,7 @@ export const environment = {
     authDomain: 'fire-pastry.firebaseapp.com',
     messagingSenderId: '251415987065',
   },
-    production: false
+    
   };
   
   /*

@@ -2,10 +2,9 @@
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
-
 <script src="https://cdn.jsdelivr.net/jquery.validation/1.15.1/jquery.validate.min.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
-      <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
 <body>
     <div class="container">
@@ -18,22 +17,22 @@
 							<h1>Pastry Login</h1>
 						 </div>
 					</div>
-                   <form action="" method="post" name="login">
+                   <form  *ngIf="!loading" action="" method="post" name="login">
                            <div class="form-group">
                               <!-- <label for="exampleInputEmail1">Email address</label> -->
-                              <label for="email">Email address</label>
-                              <input type="email" name="email"  class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                              <label for="email">User</label>
+                              <input type="email" [(ngModel)]="username" name="email"  class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
                            </div>
                            <div class="form-group">
                               <!-- <label for="exampleInputEmail1">Password</label> -->
                               <label for="password">Password</label>
-                              <input type="password" name="password" id="password"  class="form-control" aria-describedby="emailHelp" placeholder="Enter Password">
+                              <input type="password" [(ngModel)]="password" name="password" id="password"  class="form-control" aria-describedby="emailHelp" placeholder="Enter Password">
                            </div>
                            <div class="form-group">
                               <p class="text-center">By signing up you accept our <a href="#">Terms Of Use</a></p>
                            </div>
                            <div class="col-md-12 text-center ">
-                              <button type="submit" class="button">Login</button>
+                              <button type="submit" class="button" (click)="login()">Login</button>
                            </div>
                            <div class="col-md-12 ">
                               <div class="login-or">
@@ -44,7 +43,9 @@
 
                            <div class="col-md-12 mb-3">
                               <p class="text-center">
-                                 <a href="javascript:void();" class="buttongoogle" type="click" (click)="logInWithGoogle()">
+                                 <!-- <a href="javascript:void();" class="buttongoogle" type="click" (click)="logInWithGoogle()"> -->
+                                 <a href="javascript:void();" class="buttongoogle" type="click" >
+
                                     <!-- <i class="fa fa-google-plus"></i>  -->
                                     <img class="googleicon" style="height: 20px;width: 20px;" src="https://www.svgrepo.com/show/475656/google-color.svg" loading="lazy" alt="google logo">
                                     Sign in with Google
@@ -62,8 +63,9 @@
                            <div class="form-group">
                               <p class="text-center">Don't have account? <a href="#" id="signup"  routerLink="/register">Sign up here</a></p>
                            </div>
+                           
                    </form>
-                 
+                 <app-spinner *ngIf="loading"></app-spinner>
 				</div>
 			</div>
 		</div>

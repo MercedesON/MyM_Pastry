@@ -19,9 +19,14 @@ export class NavbarComponent {
 
   constructor(private router: Router) {   
   }
-  
+  ngOnInit(): void {
+  }
   goToContact() {
     console.log("goToContact");    
     this.router.navigate(['/', 'contacto']);
+  }
+  logOut() {
+    localStorage.removeItem('token');
+    this.router.navigate(['/login'])
   }
 }

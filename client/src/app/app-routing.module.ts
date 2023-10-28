@@ -3,18 +3,26 @@ import { RouterModule, Routes } from '@angular/router';
 import { ContactComponent } from './components/contact/contact.component';
 import { LoginContainerComponent } from './components/login-container/login-container.component';
 import {AboutComponent}from './components/about/about.component';
-import { SignInComponent } from './components/sign-in/sign-in.component';
 import{HomeComponent}from './components/home/home.component'
-import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 //import { DashboardComponent } from './components/dashboard/dashboard.component';
 //import { AuthGuard } from './shared/guards/auth.guard';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+
+//Componts
+import { SignInComponent } from './components/sign-in/sign-in.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
+//Guards
+import { AuthGuard } from './utils/auth.guard';
 
 const routes: Routes = [
   {path:'',redirectTo:'login',pathMatch:'full'},
   {path:'login',component: SignInComponent},
   {path:'register',component: SignUpComponent},
-  {path:'navbar',component: NavbarComponent}
+  //{path:'navbar',component: NavbarComponent},
+  { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
+  //cuando la path no haga match con nada '**' lo redirecciono al login
+  {path:'**',redirectTo:'login',pathMatch:'full' }
   // {path:'navbar',component: NavbarComponent, canActivate: [AuthGuard] },
   // {path:'home',component:HomeComponent},
   // {path:'about',component:AboutComponent},
