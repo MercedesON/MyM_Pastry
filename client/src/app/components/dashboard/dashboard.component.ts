@@ -1,25 +1,18 @@
-import { Component, OnInit } from '@angular/core';
-import { Cake } from 'src/app/interfaces/cake';
-import { CakeService } from 'src/app/services/cake.service';
-
+import { Component } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
-export class DashboardComponent implements OnInit {
-  listCake: Cake[] = []
+export class DashboardComponent {
 
-  constructor(private _cakeService: CakeService) { }
+  constructor(private authService: AuthService) {
 
-  ngOnInit(): void {
-    this.getCakes();
   }
 
-  getCakes() {
-    this._cakeService.getCakes().subscribe(data => {
-      this.listCake = data;
-    })
-  }
 
+  logOut() {
+    this.authService.logOut();
+  }
 }

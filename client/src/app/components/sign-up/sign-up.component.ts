@@ -1,13 +1,11 @@
-import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-//import { User } from '@angular/fire/auth';
 import { ToastrService } from 'ngx-toastr';
-import { User } from 'src/app/interfaces/user';
-import { ErrorService } from 'src/app/services/error.service';
 import { UserService } from 'src/app/services/user.service';
-
-//import { AuthService } from 'src/app/services/auth.service';
+import { Router } from '@angular/router';
+import { ErrorService } from 'src/app/services/error.service';
+import { User } from 'src/app/interfaces/user';
+import { AuthService } from 'src/app/services/auth.service';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-sign-up',
@@ -20,12 +18,12 @@ export class SignUpComponent implements OnInit{
   confirmPassword:string='';
   mobile:string='';
   loading: boolean = false;
-
   constructor(private toastr: ToastrService,
     private _userService: UserService,
     private router: Router,
-    private _errorService: ErrorService) { }
+    private _errorService: ErrorService,private authService: AuthService) {
 
+  }
 
   ngOnInit(): void {
     
@@ -66,10 +64,4 @@ export class SignUpComponent implements OnInit{
       }
     })
   }
-  // constructor(private authService: AuthService) {
-
-  // }
-  // signUp(email: string, password: string) {
-  //   this.authService.signUpWithEmailAndPassword(email, password);
-  // }
 }

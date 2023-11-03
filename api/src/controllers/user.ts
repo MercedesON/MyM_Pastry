@@ -48,10 +48,10 @@ export const signupUser = async (req: Request, res: Response) => {
 export const signinUser = async (req: Request, res: Response) => {
     console.log("signinUser");
     const { username, password } = req.body;
-    console.log("signinUser-username");
-    console.log(username);
-    console.log("signinUser-password");
-    console.log(password);
+    // console.log("signinUser-username");
+    // console.log(username);
+    // console.log("signinUser-password");
+    // console.log(password);
     // We validate if the user exists in the database
     const user: any = await User.findOne({ where: { username: username } });
 
@@ -59,6 +59,7 @@ export const signinUser = async (req: Request, res: Response) => {
     console.log(user);
 
     if (!user) {
+        console.log("nose encontró usuario");
         return res.status(400).json({
             msg: `There is no user with the name ${username} in the database`
         })
@@ -70,12 +71,15 @@ export const signinUser = async (req: Request, res: Response) => {
     console.log("signinUser-user.password");
     console.log(user.password);
     if (!passwordValid) {
+        console.log("password inválido");
         return res.status(400).json({
             msg: `Password Incorrecta`
         })
     }
     // We generate token
     const token = jwt.sign({ username: username }, process.env.SECRET_KEY || 'pipo123');
+    console.log("token");
+    console.log(token);
     res.json(token);
 
 }
