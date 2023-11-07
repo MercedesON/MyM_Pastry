@@ -1,7 +1,152 @@
-<nav class="navbar navbar-expand-lg bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Angular Node JWT</a>
-    <button class="btn btn-outline-success" (click)="logOut()" type="button">LogOut</button>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
 
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Bootstrap template site</title>
+  <link rel="stylesheet" href="navbar.component.html">
+  <!-- meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+
+<body>
+  <!-- header -->
+  <!-- <div class="container-fluid header">
+    <header>
+			  <img  style="width: 80px;"  src="assets/images/logo4.png" > 
+		</header>
+    </div> -->
+  <!-- end header -->
+
+  <!-- menu navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+      aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse bg-pink text-white">
+      <!-- id="navbarColor01" -->
+      <ul class="navbar-nav mr-auto col-sm-3 col-md-3">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/home">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" (click)="is0n = false;isAbout=true" routerLink="/about">About</a>
+        </li>
+
+        <!-- <li class="nav-item">
+				<div class="dropdown show">
+				  <a class="btn nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Servicios</a> -->
+        <!-- <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Servicios
+          </a> -->
+        <div class="container-fluid">
+          <ul class="navbar-nav">
+            <!-- Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                data-mdb-toggle="dropdown" aria-expanded="false">
+                Servicios
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li>
+                  <a class="dropdown-item" href="#tortas">Tortas</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#bocaditos">Bocaditos</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#complementarios">Complementos</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <li class="nav-item">
+          <a class="nav-link" (click)="is0n = false;isContacto=true" routerLink="/contact">Contacto</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <!-- <button class="btn btn-secondary my-2 my-sm-0" type="button" data-toggle="modal" data-target="#loginModal" class="fas fa-user">Login</button> -->
+        <a class="text-reset me-3" href="#">
+          <i class="fas fa-shopping-cart text-white"></i>
+        </a>
+        <button class="btn bg-white my-2 my-sm-0" type="button" data-toggle="modal" data-target="#loginModal"
+          (click)="is0n = false;isInicioSesion=true" routerLink="/login">Login</button>
+
+      </form>
+    </div>
+  </nav>
+  <app-carousel *ngIf="is0n"></app-carousel>
+  <app-about *ngIf="is0n"></app-about>
+  <app-tortas *ngIf="is0n"></app-tortas>
+  <app-bocaditos *ngIf="is0n"></app-bocaditos>
+  <app-complementarios *ngIf="is0n"></app-complementarios>
+  <!-- end navbar -->
+
+  <!-- login modal-->
+  <div class="modal" id="loginModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Login</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">x</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form class="form-signin">
+
+            <div class="form-label-group">
+              <label for="inputEmail">Email address</label>
+              <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+            </div>
+
+            <div class="form-label-group">
+              <label for="inputPassword">Password</label>
+              <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+            </div>
+
+            <div class="checkbox mb-3">
+              <label>
+                <input type="checkbox" value="remember-me"> Remember me
+              </label>
+            </div>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+            <p class="mt-5 mb-3 text-muted text-center">© 2018-2019</p>
+          </form>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
   </div>
-</nav>
+  <!-- end login modal-->
+
+  <!-- content -->
+
+  <!-- <div class="container-fluid">
+        <div class="content row">
+			<div class="col-md-2">left sidebar</div>
+			<div class="col-md-8 text-center">content</div>
+			<div class="col-md-2">Right Sidebar</div>
+			
+        </div>
+    </div> -->
+
+  <!-- <footer>© 2018-2019</footer> -->
+  <app-footer *ngIf="is0n" style="margin-top: -70px;"></app-footer>
+  <!-- this template is made by silvan paul -->
+</body>
+
+</html>
