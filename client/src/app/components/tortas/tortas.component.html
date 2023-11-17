@@ -1,4 +1,18 @@
-<!-- import { Link } from "react-router-dom"; -->
+<div >
+  <h2 class="titulo" style="font-size:large; text-transform: uppercase; color: black;">TORTAS</h2>
+</div>
+<div class="container">
+  <swiper [config]="config" >
+       <ng-template swiperSlide *ngFor="let slide of slides">
+           <a [href]="slide.link" target="_blank" >
+                <img [src]="slide.image" alt="foto" />
+           </a>
+      </ng-template>
+ </swiper>
+</div>
+
+<!--mili-->
+<!-- import { Link } from "react-router-dom";
 <div id="carouselExampleCaptions" class="carousel slide">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -125,9 +139,9 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
-</div>
+</div> -->
 
-
+<!--primero-->
 <!-- <section id="tortas"  style="margin-top: -70px;">
 <div class="container">
 

@@ -1,0 +1,12 @@
+<div >
+    <h2 class="titulo" style="font-size:large; text-transform: uppercase; color: black;">CAKES</h2>
+  </div>
+  <div class="container">
+    <swiper [config]="config" >
+         <ng-template swiperSlide *ngFor="let slide of slides">
+             <a [href]="slide.link" target="_blank" >
+                  <img [src]="slide.image" alt="foto" />
+             </a>
+        </ng-template>
+   </swiper>
+  </div>

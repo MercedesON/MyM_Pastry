@@ -1,12 +1,8 @@
-import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //import { RouterModule } from '@angular/router';
-import { AppComponent } from './app.component';
 //import { BrowserModule } from '@angular/platform-browser/';
 //import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { SwiperModule } from 'swiper/angular';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
@@ -35,7 +31,15 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
+import { SwiperModule } from 'swiper/angular';
+
+//Carousel Owl
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { AppComponent } from './app.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+//-------------------------//
 
 // import { CarouselResponsiveModule } from 'primeng/carousel';
 // import { TagModule } from 'primeng/tag';
@@ -50,6 +54,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SpinnerComponent } from './shared/spinner/spinner.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AddTokenInterceptor } from './utils/add-token.interceptor';
+import { CakesComponent } from './components/cakes/cakes.component';
+import { SnacksComponent } from './components/snacks/snacks.component';
 
 @NgModule({
   declarations: [ 
@@ -67,14 +73,21 @@ import { AddTokenInterceptor } from './utils/add-token.interceptor';
     ContactComponent,
     LoginContainerComponent,
     SpinnerComponent,
-    DashboardComponent
+    DashboardComponent,
+    CakesComponent,
+    SnacksComponent
    
   ],
   imports: [        
     AppRoutingModule,
     HttpClientModule,    
     FormsModule,
+    SwiperModule,
+    //Carousel OWL
+    BrowserModule,
+    CarouselModule, 
     BrowserAnimationsModule,
+    //---------------------//
     ToastrModule.forRoot({
       timeOut: 4000,
       positionClass: 'toast-bottom-right',
@@ -84,7 +97,6 @@ import { AddTokenInterceptor } from './utils/add-token.interceptor';
     FontAwesomeModule, 
     ReactiveFormsModule,
     SwiperModule,
-    CarouselModule, 
     FlexLayoutModule,
     MatInputModule, 
     MatSelectModule, 

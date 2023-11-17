@@ -2,34 +2,38 @@
 
 // html, body { height: 100%; }
 // body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-@import url('https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.3/assets/owl.carousel.css');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.3/assets/owl.carousel.min.css');
-@import url('https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.3/assets/owl.theme.default.css');
-body{
-    background-color: #eeeeee;
-    font-family: 'Raleway', sans-serif;
-}
-h1{
-    font-size: 52px;
-    font-weight: 900;
-}
-h2{
-    font-size: 48px;
-    font-weight: 100;
-    text-transform: lowercase;
-}
-h3{
-    font-size: 24px;
-    font-weight: 700;
-}
-.padded{
-    padding-top: 80px;
-    padding-bottom: 80px;
-}
-.filaSeleccionada{
-    background-color: #ffcc00!important;
-}
 
+// @import url('https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.3/assets/owl.carousel.css');
+// @import url('https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.3/assets/owl.carousel.min.css');
+// @import url('https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.3/assets/owl.theme.default.css');
+// body{
+//     background-color: #eeeeee;
+//     font-family: 'Raleway', sans-serif;
+// }
+// h1{    
+//     font-size: 52px;
+//     font-weight: 900;
+// }
+// h2{
+//     font-size: 48px;
+//     font-weight: 100;
+//     text-transform: lowercase;
+// }
+// h3{
+//     font-size: 24px;
+//     font-weight: 700;
+// }
+// .padded{
+//     padding-top: 80px;
+//     padding-bottom: 80px;
+// }
+// .filaSeleccionada{
+//     background-color: #ffcc00!important;
+// }
+/*......swiper.............*/
+@import "swiper/scss";
+@import "swiper/scss/navigation";
+@import "swiper/scss/pagination";
 /*-----Para iniciar sesión (sign in)--------------*/
 .ng-valid:not(form).ng-touched   {
     border-left: 5px solid #42A948; /* green */
@@ -38,3 +42,4 @@ h3{
 .ng-invalid:not(form).ng-touched  {
     border-left: 5px solid #a94442; /* red */
   }
+
