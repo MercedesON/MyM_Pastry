@@ -6,12 +6,14 @@ export const Cake = db.define('cake', {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true
-
     },
     name: {
         type: DataTypes.STRING
     },
-    description: {
+    price: {
+        type: DataTypes.DECIMAL
+    },
+    image: {
         type: DataTypes.STRING
     }
 }, {

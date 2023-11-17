@@ -17,20 +17,13 @@
 </head>
 
 <body>
-  <!-- header -->
-  <!-- <div class="container-fluid header">
-    <header>
-			  <img  style="width: 80px;"  src="assets/images/logo4.png" > 
-		</header>
-    </div> -->
-  <!-- end header -->
-
   <!-- menu navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
       aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+	
     <div class="collapse navbar-collapse bg-pink text-white">
       <!-- id="navbarColor01" -->
       <ul class="navbar-nav mr-auto col-sm-3 col-md-3">
@@ -47,28 +40,12 @@
         <!-- <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Servicios
           </a> -->
-        <div class="container-fluid">
-          <ul class="navbar-nav">
-            <!-- Dropdown -->
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                data-mdb-toggle="dropdown" aria-expanded="false">
-                Servicios
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li>
-                  <a class="dropdown-item" href="#tortas">Tortas</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#bocaditos">Bocaditos</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#complementarios">Complementos</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
+          <select class="nav-link dropdown-toggle" aria-label="Default select example">
+            <option selected>Servicios</option>
+            <option [routerLink]="['/tortas']">Tortas</option>
+            <option [routerLink]="['/bocaditos']">Bocaditos</option>
+            <option [routerLink]="['/complementarios']">Complementos</option>
+          </select>
         <li class="nav-item">
           <a class="nav-link" (click)="is0n = false;isContacto=true" routerLink="/contact">Contacto</a>
         </li>
@@ -92,7 +69,7 @@
   <!-- end navbar -->
 
   <!-- login modal-->
-  <div class="modal" id="loginModal" tabindex="-1" role="dialog">
+  <!-- <div class="modal" id="loginModal" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -130,7 +107,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   <!-- end login modal-->
 
   <!-- content -->
@@ -145,7 +122,7 @@
     </div> -->
 
   <!-- <footer>© 2018-2019</footer> -->
-  <app-footer *ngIf="is0n" style="margin-top: -70px;"></app-footer>
+  <!-- <app-footer *ngIf="is0n" style="margin-top: -70px;"></app-footer> -->
   <!-- this template is made by silvan paul -->
 </body>
 

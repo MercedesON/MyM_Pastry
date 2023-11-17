@@ -1,3 +1,13 @@
+//---swiper
+// img {
+//   border-radius: var(--bs-border-radius) !important;
+//   width: 100% !important;
+//   display: block !important;
+//   object-fit: scale-down;
+//   padding: 0px;
+// }
+//---//
+
 $ancho-contenedor: 1340px;
 $largo-contenedor: 400px;
 .container {
@@ -76,60 +86,60 @@ $largo-contenedor: 400px;
 
 /* ----------------------------------------------------------------------------------------------------- */
 
-// @media (max-width: 1024px) {
-//   .container {
+@media (max-width: 1024px) {
+  .container {
     
-//     flex-wrap:wrap;
+    flex-wrap:wrap;
 
-//     justify-content: center;
+    justify-content: center;
     
     
-//   }
-//    .titulo{
-//     font-size: 20px;
-//     margin-left: 10px;
-//    }
+  }
+   .titulo{
+    font-size: 20px;
+    margin-left: 10px;
+   }
 
-//   .buttonContainer2,
-//   .buttonContainer1 { margin-left: 20px;}
-// }
-// @media (max-width: 576px) {
-//   .text{
-//     font-size: 13px;
-//   }
-//   .buttonContainer2,
-//   .buttonContainer1 {
-//     width: 30%;
-//     height: 70%;    
-//   }
+  .buttonContainer2,
+  .buttonContainer1 { margin-left: 20px;}
+}
+@media (max-width: 576px) {
+  .text{
+    font-size: 13px;
+  }
+  .buttonContainer2,
+  .buttonContainer1 {
+    width: 30%;
+    height: 70%;    
+  }
  
-//   .titulo{
-//     font-size: 17px;
-//   }
-//   .button img {
-//     /* Estilos para las imágenes */
-//     width: 120px; /* Ajusta el tamaño según tus necesidades */
-//     height: 40%;
-//     border-radius: 10px;
-//   }
-// }
-// @media (max-width: 490px) {
-//   .text{
-//     font-size: 11px;
-//   }
-//   .buttonContainer2,
-//   .buttonContainer1 {
-//     width: 30%;
-//     height: 70%;
+  .titulo{
+    font-size: 17px;
+  }
+  .button img {
+    /* Estilos para las imágenes */
+    width: 120px; /* Ajusta el tamaño según tus necesidades */
+    height: 40%;
+    border-radius: 10px;
+  }
+}
+@media (max-width: 490px) {
+  .text{
+    font-size: 11px;
+  }
+  .buttonContainer2,
+  .buttonContainer1 {
+    width: 30%;
+    height: 70%;
     
-//   } 
-//   .titulo{
-//     font-size: 17px;
-//   }
-//   .button img {
-//     /* Estilos para las imágenes */
-//     width: 80px; /* Ajusta el tamaño según tus necesidades */
-//     height: 40%;
-//     border-radius: 10px;
-//   }
-// }
+  } 
+  .titulo{
+    font-size: 17px;
+  }
+  .button img {
+    /* Estilos para las imágenes */
+    width: 80px; /* Ajusta el tamaño según tus necesidades */
+    height: 40%;
+    border-radius: 10px;
+  }
+}

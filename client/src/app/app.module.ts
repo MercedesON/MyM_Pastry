@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 //import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SwiperModule } from 'swiper/angular';
-import { CarouselModule } from 'ngx-owl-carousel-o';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
@@ -36,6 +35,11 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+
+// import { CarouselResponsiveModule } from 'primeng/carousel';
+// import { TagModule } from 'primeng/tag';
+// import { ButtonModule } from 'primeng/button';
 //Components
 import { SignInComponent } from './components/sign-in/sign-in.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
@@ -46,14 +50,15 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SpinnerComponent } from './shared/spinner/spinner.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AddTokenInterceptor } from './utils/add-token.interceptor';
+
 @NgModule({
   declarations: [ 
     AppComponent,
     NavbarComponent,
+    CarouselComponent,
     SignInComponent,
     SignUpComponent,  
     FooterComponent,
-    CarouselComponent, 
     HomeComponent,     
     AboutComponent, 
     TortasComponent,
@@ -75,12 +80,13 @@ import { AddTokenInterceptor } from './utils/add-token.interceptor';
       positionClass: 'toast-bottom-right',
       preventDuplicates: true,
     }),
+    
     FontAwesomeModule, 
     ReactiveFormsModule,
     SwiperModule,
     CarouselModule, 
-   FlexLayoutModule,
-   MatInputModule, 
+    FlexLayoutModule,
+    MatInputModule, 
     MatSelectModule, 
     MatSelectModule, 
     MatAutocompleteModule,
@@ -91,7 +97,10 @@ import { AddTokenInterceptor } from './utils/add-token.interceptor';
     MatListModule,
     MatBadgeModule,
     MatSidenavModule,
-    MdbCarouselModule,
+     MdbCarouselModule,
+    // CarouselResponsiveModule,
+    // TagModule,
+    // ButtonModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     // error solution NullInjectError

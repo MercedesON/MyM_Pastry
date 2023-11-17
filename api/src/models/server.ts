@@ -38,6 +38,7 @@ class Server {
     async dbConnect() {
         try {
             await Cake.sync()
+            //await Cake.sync({ force: true });
             await User.sync();
             //await User.sync({ force: true });
         } catch (error) {
