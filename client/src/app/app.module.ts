@@ -56,6 +56,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AddTokenInterceptor } from './utils/add-token.interceptor';
 import { CakesComponent } from './components/cakes/cakes.component';
 import { SnacksComponent } from './components/snacks/snacks.component';
+import { ComplementaryComponent } from './components/complementary/complementary.component';
 
 @NgModule({
   declarations: [ 
@@ -75,7 +76,8 @@ import { SnacksComponent } from './components/snacks/snacks.component';
     SpinnerComponent,
     DashboardComponent,
     CakesComponent,
-    SnacksComponent
+    SnacksComponent,
+    ComplementaryComponent
    
   ],
   imports: [        
