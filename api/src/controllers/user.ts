@@ -48,8 +48,8 @@ export const signupUser = async (req: Request, res: Response) => {
 export const signinUser = async (req: Request, res: Response) => {
     console.log("signinUser");
     const { username, password } = req.body;
-    // console.log("signinUser-username");
-    // console.log(username);
+     console.log("signinUser-username");
+     console.log(username);
     // console.log("signinUser-password");
     // console.log(password);
     // We validate if the user exists in the database

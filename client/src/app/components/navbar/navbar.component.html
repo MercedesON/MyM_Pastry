@@ -42,9 +42,9 @@
           </a> -->
           <select class="nav-link dropdown-toggle" aria-label="Default select example">
             <option selected>Servicios</option>
-            <option [routerLink]="['/tortas']">Tortas</option>
-            <option [routerLink]="['/bocaditos']">Bocaditos</option>
-            <option [routerLink]="['/complementarios']">Complementos</option>
+            <option [routerLink]="['/cakes']">Tortas</option>
+            <option [routerLink]="['/snacks']">Bocaditos</option>
+            <option [routerLink]="['/complementary']">Complementos</option>
           </select>
         <li class="nav-item">
           <a class="nav-link" (click)="is0n = false;isContacto=true" routerLink="/contact">Contacto</a>
@@ -63,9 +63,9 @@
   </nav>
   <app-carousel *ngIf="is0n"></app-carousel>
   <app-about *ngIf="is0n"></app-about>
-  <app-tortas *ngIf="is0n"></app-tortas>
-  <app-bocaditos *ngIf="is0n"></app-bocaditos>
-  <app-complementarios *ngIf="is0n"></app-complementarios>
+  <app-cakes *ngIf="is0n"></app-cakes>
+  <app-snacks *ngIf="is0n"></app-snacks>
+  <app-complementary *ngIf="is0n"></app-complementary>
   <!-- end navbar -->
 
   <!-- login modal-->

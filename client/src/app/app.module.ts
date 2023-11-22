@@ -15,11 +15,8 @@ import {MatListModule} from "@angular/material/list";
 import {MatBadgeModule} from "@angular/material/badge";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
-import { TortasComponent } from './components/tortas/tortas.component';
 //import { ServiciosComponent } from './components/servicios/servicios.component';
 //import { VisionComponent } from './components/vision/vision.component';
-import { BocaditosComponent } from './components/bocaditos/bocaditos.component';
-import { ComplementariosComponent } from './components/complementarios/complementarios.component';
 import { LoginContainerComponent } from './components/login-container/login-container.component';
 import { AboutComponent } from './components/about/about.component';
 import{HomeComponent}from './components/home/home.component';
@@ -57,6 +54,9 @@ import { AddTokenInterceptor } from './utils/add-token.interceptor';
 import { CakesComponent } from './components/cakes/cakes.component';
 import { SnacksComponent } from './components/snacks/snacks.component';
 import { ComplementaryComponent } from './components/complementary/complementary.component';
+import { CakeManagerComponent } from './components/cake-manager/cake-manager.component';
+import { SnackManagerComponent } from './components/snack-manager/snack-manager.component';
+import { ComplementaryManagerComponent } from './components/complementary-manager/complementary-manager.component';
 
 @NgModule({
   declarations: [ 
@@ -68,16 +68,16 @@ import { ComplementaryComponent } from './components/complementary/complementary
     FooterComponent,
     HomeComponent,     
     AboutComponent, 
-    TortasComponent,
-    BocaditosComponent,
-    ComplementariosComponent,
     ContactComponent,
     LoginContainerComponent,
     SpinnerComponent,
     DashboardComponent,
     CakesComponent,
     SnacksComponent,
-    ComplementaryComponent
+    ComplementaryComponent,
+    CakeManagerComponent,
+    SnackManagerComponent,
+    ComplementaryManagerComponent
    
   ],
   imports: [        
